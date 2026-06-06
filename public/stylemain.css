@@ -7,7 +7,6 @@
 
 body {
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
@@ -188,7 +187,7 @@ body {
   box-shadow: 0 6px 20px rgba(246, 57, 131, 0.5);
 }
 
-/* ===== ЦЕНТРАЛЬНЫЙ КОНТЕНТ ===== */
+
 .content-center {
   background: rgba(255, 255, 255, 0.85);
   border-radius: 25px;
@@ -198,11 +197,11 @@ body {
   border: 3px solid rgba(255, 182, 193, 0.5);
 }
 
-/* Логотип HELLO */
+
 .hello-logo {
   text-align: center;
-  margin-bottom: 30px;
-  padding: 20px;
+  margin-bottom: 10px;
+  padding: 30px;
   background: linear-gradient(135deg, rgba(255, 102, 178, 0.2), rgba(255, 182, 193, 0.2));
   border-radius: 15px;
   border: 3px solid rgba(255, 102, 178, 0.5);
@@ -313,12 +312,12 @@ body {
   gap: 15px;
 }
 
-.deco-image {
+/* .deco-image {
   border-radius: 15px;
   border: 3px solid rgba(255, 102, 178, 0.4);
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(255, 102, 178, 0.3);
-}
+} */
 
 .deco-image:hover {
   transform: scale(1.05) rotate(2deg);
@@ -326,8 +325,10 @@ body {
 }
 
 .deco-image.large {
-  width: 100%;
-  height: auto;
+   height: 820px;
+  position: relative;
+  object-fit: cover;
+  aspect-ratio: 683/820;
 }
 
 .deco-image.circle {
@@ -335,6 +336,24 @@ body {
   width: 150px;
   height: 150px;
   align-self: center;
+}
+.deco-image1{
+     width: 444px;
+  height: 244px;
+  position: relative;
+  object-fit: cover;
+  aspect-ratio: 1;
+  padding: 30px;
+}
+
+.deco-image2{
+      width: 244px;
+  height: 244px;
+  left: 210px;
+  position: relative;
+  object-fit: cover;
+  aspect-ratio: 1;
+  padding: 100;
 }
 
 /* ===== ДЕКОРАТИВНЫЕ ЭЛЕМЕНТЫ ===== */
