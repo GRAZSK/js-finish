@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #ff66b2 0%, #ff99cc 50%, #ffccdd 100%);
+  
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
