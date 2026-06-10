@@ -1,442 +1,586 @@
-.div,
+/* ===== БАЗОВЫЕ СБРОСЫ ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  background:url(./pic/tumblr_inline_n5br643k5X1r4ugnn.png);
+}
+
+/* ===== ГЛАВНЫЙ КОНТЕЙНЕР ===== */
+.div {
+  background: #ffffff;
+  width: 100%;
+  max-width: 1440px;
+  aspect-ratio: 1440 / 2836;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.top-nav,
+.bottom-nav {
+  background: rgba(146, 11, 58, 0.95);
+  padding: 15px 0;
+  position: relative;
+  z-index: 100;
+}
+
+.nav-menu {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 20px;
+  border-radius: 22px;
+  background: rgba(255, 35, 167, 0.4);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: rgba(255, 35, 167, 0.8);
+  border-color: #ff66b2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 102, 178, 0.5);
+}
+
 .div * {
   box-sizing: border-box;
 }
-.div {
-  background: #ffffff;
-  height: 2836px;
-  position: relative;
-  overflow: hidden;
-}
+
+/* ===== ФОНОВЫЕ ИЗОБРАЖЕНИЯ ===== */
 .f-8-e-3-ae-5640198476-de-246-c-0-e-5-df-142-bd-1 {
-  width: 1625px;
-  height: 1024px;
+  width: 112.847%;
+  height: 36.107%;
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0%;
+  top: 0%;
   object-fit: cover;
-  aspect-ratio: 1625/1024;
+  aspect-ratio: 1625 / 1024;
 }
+
 .f-8-e-3-ae-5640198476-de-246-c-0-e-5-df-142-bd-2 {
-  width: 3156px;
-  height: 1989px;
+  width: 219.167%;
+  height: 70.134%;
   position: absolute;
-  left: -378px;
-  top: 1024px;
+  left: -26.25%;
+  top: 36.107%;
   object-fit: cover;
-  aspect-ratio: 3156/1989;
+  aspect-ratio: 3156 / 1989;
 }
+
 .petals-1 {
-  width: 1494px;
-  height: 747px;
+  width: 103.75%;
+  height: 26.34%;
   position: absolute;
-  left: -37px;
-  top: 181px;
+  left: -2.569%;
+  top: 6.382%;
   object-fit: cover;
-  aspect-ratio: 2/1;
+  aspect-ratio: 2 / 1;
 }
+
+/* ===== ЦЕНТРАЛЬНЫЙ БЕЛЫЙ БЛОК ===== */
 .rectangle-15 {
   background: #fffefe;
-  width: 678px;
-  height: 1379px;
+  width: 47.083%;
+  height: 48.625%;
   position: absolute;
-  left: 371px;
-  top: 1233px;
+  left: 25.764%;
+  top: 43.477%;
 }
+
+/* ===== БОКОВЫЕ ДЕВУШКИ (img-8835) ===== */
 .img-8835-1 {
-  width: 271px;
-  height: 864px;
+  width: 18.819%;
+  height: 30.465%;
   position: absolute;
-  left: 1169px;
-  top: 1188px;
+  left: 81.181%;
+  top: 41.89%;
   object-fit: cover;
-  aspect-ratio: 271/864;
+  aspect-ratio: 271 / 864;
 }
+
 .img-8835-2 {
-  width: 271px;
-  height: 864px;
+  width: 18.819%;
+  height: 30.465%;
   position: absolute;
-  left: 25px;
-  top: 1188px;
+  left: 1.736%;
+  top: 41.89%;
   object-fit: cover;
-  aspect-ratio: 271/864;
+  aspect-ratio: 271 / 864;
 }
-.tumblr-7548-d-93-b-4-bc-3-cb-396-ccb-6-c-3-d-49-d-68109-3184-cc-69-1280-1 {
-  width: 1496.01px;
-  height: 846.23px;
+
+/* ===== ПОВЁРНУТЫЙ БАННЕР ===== */
+.tumblr-7548-d93-b4-bc-3-cb-396-ccb-6-c-3-d-49-d-68109-3184-cc-69-1280-1 {
+  width: 103.89%;
+  height: 29.839%;
   position: absolute;
-  left: 1142.23px;
-  top: 1188px;
+  left: 79.322%;
+  top: 41.89%;
   transform-origin: 0 0;
   transform: rotate(89.924deg) scale(1, 1);
   object-fit: cover;
-  aspect-ratio: 1496.01/846.23;
+  aspect-ratio: 1496.01 / 846.23;
 }
-.rectangle-13 {
-  background: #ff82bc;
-  width: 1440px;
-  height: 85px;
-  position: absolute;
-  left: 0px;
-  top: 2763px;
-}
-.rectangle-14 {
-  background: #ffcee5;
-  width: 1440px;
-  height: 85px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-}
+
+
+
+/* ===== ВЕРХНИЙ БАННЕР С ТЕКСТОМ ===== */
 .dbrfiax-f-6058-de-8-a-6-ec-4465-94-d-2-749-bb-66-f-0-c-26-1 {
-  width: 1477px;
-  height: 120px;
+  width: 102.569%;
+  height: 4.231%;
   position: absolute;
-  left: -37px;
-  top: 56px;
+  left: -2.569%;
+  top: 1.975%;
   object-fit: cover;
-  aspect-ratio: 1477/120;
+  aspect-ratio: 1477 / 120;
 }
+
+/* ===== НИЖНИЙ ДЕКОРАТИВНЫЙ БАННЕР ===== */
 .ddv-3-z-3-m-63-e-2-b-252-7548-41-b-3-8-f-82-6891149400-bd-1 {
-  width: 1440px;
-  height: 175px;
+  width: 100%;
+  height: 6.171%;
   position: absolute;
-  left: -2px;
-  top: 2643px;
+  left: -0.139%;
+  top: 93.195%;
   object-fit: cover;
-  aspect-ratio: 1440/175;
+  aspect-ratio: 1440 / 175;
 }
+
+/* ===== МАЛЕНЬКАЯ КАРТИНКА СЛЕВА ===== */
 .r-9-kkry-1 {
-  width: 278px;
-  height: 202px;
+  width: 19.306%;
+  height: 7.123%;
   position: absolute;
-  left: 50px;
-  top: 700px;
+  left: 3.472%;
+  top: 24.683%;
   object-fit: cover;
-  aspect-ratio: 278/202;
+  aspect-ratio: 278 / 202;
 }
+
+/* ===== ЦЕНТРАЛЬНЫЙ МОНИТОР/ТВ ===== */
 .latgzr-1 {
-  width: 904px;
-  height: 867px;
+  width: 62.778%;
+  height: 30.571%;
   position: absolute;
-  left: 296px;
-  top: 140px;
+  left: 20.556%;
+  top: 4.937%;
   object-fit: cover;
-  aspect-ratio: 904/867;
+  aspect-ratio: 904 / 867;
 }
+
+/* ===== ГОРИЗОНТАЛЬНАЯ ПОЛОСА ПОД МОНИТОРОМ ===== */
 .tumblr-563-a-029909-d-44-e-5-b-99-a-9-dc-12-d-8162-b-18-2-f-9-b-72-d-4-400-1 {
-  width: 1457px;
-  height: 254px;
+  width: 101.181%;
+  height: 8.956%;
   position: absolute;
-  left: -9px;
-  top: 918px;
+  left: -0.625%;
+  top: 32.37%;
   object-fit: cover;
-  aspect-ratio: 1457/254;
+  aspect-ratio: 1457 / 254;
 }
+
+/* ===== ПРАВЫЙ ВЕРХНИЙ АВАТАР ===== */
 .dmn-3-g-7-1 {
-  width: 234px;
-  height: 252px;
+  width: 16.25%;
+  height: 8.886%;
   position: absolute;
-  left: 1169px;
-  top: 176px;
+  left: 81.181%;
+  top: 6.206%;
   object-fit: cover;
-  aspect-ratio: 234/252;
+  aspect-ratio: 234 / 252;
 }
+
+/* ===== ПРАВЫЕ АВАТАРЫ (середина) ===== */
 ._1280286-sokmo-55-abo-1 {
-  width: 203px;
-  height: 203px;
+  width: 14.097%;
+  height: 7.158%;
   position: absolute;
-  left: 1203px;
-  top: 715px;
+  left: 83.542%;
+  top: 25.212%;
   object-fit: cover;
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
 }
+
 .b-59-x-24-1 {
-  width: 220px;
-  height: 207px;
+  width: 15.278%;
+  height: 7.299%;
   position: absolute;
-  left: 1200px;
-  top: 711px;
+  left: 83.333%;
+  top: 25.071%;
   object-fit: cover;
-  aspect-ratio: 220/207;
+  aspect-ratio: 220 / 207;
 }
+
+/* ===== ПРАВЫЙ НИЖНИЙ АВАТАР ===== */
 ._1293615-a-9-bwb-9-ebip-1 {
-  width: 276px;
-  height: 276px;
+  width: 19.167%;
+  height: 9.732%;
   position: absolute;
-  left: 1144px;
-  top: 2019px;
+  left: 79.444%;
+  top: 71.192%;
   object-fit: cover;
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
 }
+
+/* ===== ЦЕНТРАЛЬНЫЙ ПЕРСОНАЖ (большой) ===== */
 .b-3-da-2-c-87-ae-0-e-5-ed-67795555-c-6590-d-02-e-edited-free-carve-photos-1 {
-  width: 725px;
-  height: 634px;
+  width: 50.347%;
+  height: 22.355%;
   position: absolute;
-  left: 377px;
-  top: 294px;
+  left: 26.181%;
+  top: 10.367%;
   object-fit: cover;
-  aspect-ratio: 725/634;
+  aspect-ratio: 725 / 634;
 }
+
+/* ===== НИЖНЯЯ ЦЕНТРАЛЬНАЯ КАРТИНКА ===== */
 ._1815461-kr-6-olxnodw-1 {
-  width: 322px;
-  height: 180px;
+  width: 22.361%;
+  height: 6.347%;
   position: absolute;
-  left: 549px;
-  top: 2413px;
+  left: 38.125%;
+  top: 85.085%;
   object-fit: cover;
-  aspect-ratio: 322/180;
+  aspect-ratio: 322 / 180;
 }
+
+/* ===== НАКЛОНЁННЫЙ БАННЕР "MORE BLUSH" ===== */
 .tumblr-4-eecfceba-6-b-3-cdf-995-e-09-a-19-d-3087192-9503107-a-250-1 {
-  width: 347px;
-  height: 132px;
+  width: 24.097%;
+  height: 4.654%;
   position: absolute;
-  left: 210px;
-  top: 268.2px;
+  left: 14.583%;
+  top: 9.457%;
   transform-origin: 0 0;
   transform: rotate(-16.095deg) scale(1, 1);
   object-fit: cover;
-  aspect-ratio: 347/132;
+  aspect-ratio: 347 / 132;
 }
+
+/* ===== ЛЕВЫЙ ВЕРХНИЙ АВАТАР ===== */
 .tumblr-c-767-bcda-9-da-703-b-20-bcfef-5-b-206-c-2079-20155-f-1-c-100-1 {
-  width: 261px;
-  height: 148px;
+  width: 18.125%;
+  height: 5.219%;
   position: absolute;
-  left: 35px;
-  top: 395px;
+  left: 2.431%;
+  top: 13.928%;
   object-fit: cover;
-  aspect-ratio: 261/148;
+  aspect-ratio: 261 / 148;
 }
+
+/* ===== ЦЕНТРАЛЬНЫЙ КОНТЕНТ-БЛОК (рамка с картинками) ===== */
 ._30-1 {
-  width: 693px;
-  height: 537px;
+  width: 48.125%;
+  height: 18.935%;
   position: absolute;
-  left: 371px;
-  top: 1265px;
+  left: 25.764%;
+  top: 44.605%;
   object-fit: cover;
-  aspect-ratio: 693/537;
+  aspect-ratio: 693 / 537;
 }
+
+/* ===== НАДПИСЬ "MORE BLUSH!" ===== */
 .tumblr-3-a-84337694-f-21-fd-0-b-880-e-1-bd-63101-fd-7-351868-fd-250-1 {
-  width: 645px;
-  height: 86px;
+  width: 44.792%;
+  height: 3.032%;
   position: absolute;
-  left: 395px;
-  top: 1802px;
+  left: 27.431%;
+  top: 63.54%;
   object-fit: cover;
-  aspect-ratio: 645/86;
+  aspect-ratio: 645 / 86;
 }
+
+/* ===== ПЛЕЕР / ВИДЕО-БЛОК ===== */
 .img-1607-1 {
-  width: 698px;
-  height: 444px;
+  width: 48.472%;
+  height: 15.656%;
   position: absolute;
-  left: 371px;
-  top: 1888px;
+  left: 25.764%;
+  top: 66.573%;
   object-fit: cover;
-  aspect-ratio: 698/444;
+  aspect-ratio: 698 / 444;
 }
+
+/* ===== НАДПИСЬ "internet angel" ===== */
 .tumblr-39-d-74-a-25-bedb-80-ca-1-b-91210-cf-6-af-8-be-5-8-e-126094-250-1 {
-  width: 525px;
-  height: 70px;
+  width: 36.458%;
+  height: 2.468%;
   position: absolute;
-  left: 434px;
-  top: 2332px;
+  left: 30.139%;
+  top: 82.229%;
   object-fit: cover;
-  aspect-ratio: 525/70;
+  aspect-ratio: 525 / 70;
 }
+
+/* ===== СЕРДЕЧКО СЛЕВА ===== */
 .tumblr-d-11-ff-6-cba-21-d-4-f-3-da-777-d-74-f-0-a-830549-c-152-bafb-75-1 {
-  width: 76px;
-  height: 76px;
+  width: 5.278%;
+  height: 2.68%;
   position: absolute;
-  left: 175px;
-  top: 693px;
+  left: 12.153%;
+  top: 24.436%;
   object-fit: cover;
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
 }
+
+/* ===== ПРАВЫЙ АВАТАР (середина-верх) ===== */
 .tumblr-0-bb-606-cc-7325460-efec-8-a-08374-e-87-d-48-998-a-197-a-250-1 {
-  width: 242px;
-  height: 139px;
+  width: 16.806%;
+  height: 4.901%;
   position: absolute;
-  left: 1184px;
-  top: 452px;
+  left: 82.222%;
+  top: 15.938%;
   object-fit: cover;
-  aspect-ratio: 242/139;
+  aspect-ratio: 242 / 139;
 }
+
+/* ===== ЛЕВАЯ ДЕВУШКА ВНИЗУ ===== */
 .tumblr-5-d-2-ff-0-ea-5-b-0-cf-893-e-0-ad-76-d-7091-b-8385-4-a-682-ab-8-250-1 {
-  width: 363px;
-  height: 544px;
+  width: 25.208%;
+  height: 19.182%;
   position: absolute;
-  left: 25px;
-  top: 2217px;
+  left: 1.736%;
+  top: 78.174%;
   object-fit: cover;
-  aspect-ratio: 363/544;
+  aspect-ratio: 363 / 544;
 }
+
+/* ===== ЛЕВАЯ КАРТИНКА (середина) ===== */
 .tumblr-326-b-532281-c-005288-d-4-e-633-c-69-f-028-f-7-5-a-98362-b-100-1 {
-  width: 271px;
-  height: 153px;
+  width: 18.819%;
+  height: 5.395%;
   position: absolute;
-  left: 25px;
-  top: 1563px;
+  left: 1.736%;
+  top: 55.113%;
   object-fit: cover;
-  aspect-ratio: 271/153;
+  aspect-ratio: 271 / 153;
 }
+
+/* ===== НАКЛОНЁННЫЙ РОЗОВЫЙ ТЕЛЕФОН ===== */
 .tumblr-5562-b-75894537162-b-7-e-94113-ed-37-d-02-a-71-b-863-b-7-100-1 {
-  width: 107.3px;
-  height: 379.12px;
+  width: 7.451%;
+  height: 13.368%;
   position: absolute;
-  left: 1069px;
-  top: 1435.24px;
+  left: 74.236%;
+  top: 50.608%;
   transform-origin: 0 0;
   transform: rotate(-40.187deg) scale(1, 1);
   object-fit: cover;
-  aspect-ratio: 107.3/379.12;
+  aspect-ratio: 107.3 / 379.12;
 }
+
+/* ===== ПРАВЫЙ АВАТАР (середина-низ) ===== */
 .tumblr-f-43-eedd-0-c-0-f-41-d-6-e-149-d-707-e-46-e-2-ed-7-a-26-aa-6-a-75-100-1 {
-  width: 229px;
-  height: 127px;
+  width: 15.903%;
+  height: 4.478%;
   position: absolute;
-  left: 1167px;
-  top: 1845px;
+  left: 81.042%;
+  top: 65.056%;
   object-fit: cover;
-  aspect-ratio: 229/127;
+  aspect-ratio: 229 / 127;
 }
+
+/* ===== ПРАВЫЙ НИЖНИЙ АВАТАР ===== */
 .tumblr-e-415-bf-52-bbe-05458-bc-5-d-46-f-112832-abd-d-083374-f-100-1 {
-  width: 242px;
-  height: 137px;
+  width: 16.806%;
+  height: 4.831%;
   position: absolute;
-  left: 1189px;
-  top: 2402px;
+  left: 82.569%;
+  top: 84.697%;
   object-fit: cover;
-  aspect-ratio: 242/137;
+  aspect-ratio: 242 / 137;
 }
+
+/* ===== СЕРДЕЧКО СЛЕВА (середина) ===== */
 .tumblr-e-014412-b-4339-fc-9-fc-6638-b-736-b-682029-d-0-e-7866-e-75-f-1 {
-  width: 109px;
-  height: 109px;
+  width: 7.569%;
+  height: 3.843%;
   position: absolute;
-  left: 213px;
-  top: 1524px;
+  left: 14.792%;
+  top: 53.738%;
   object-fit: cover;
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
 }
+
+/* ===== ЛЕВАЯ КАРТИНКА (низ) ===== */
 .tumblr-f-9-d-433-b-3-eb-6-ffa-7-c-72-acd-820-c-8-e-851-bc-75184438-100-1 {
-  width: 262.66px;
-  height: 145.92px;
+  width: 18.24%;
+  height: 5.145%;
   position: absolute;
-  left: 33.48px;
-  top: 1864px;
+  left: 2.325%;
+  top: 65.726%;
   transform-origin: 0 0;
   transform: rotate(0.188deg) scale(1, 1);
   object-fit: cover;
-  aspect-ratio: 262.66/145.92;
+  aspect-ratio: 262.66 / 145.92;
 }
+
+/* ===== МАЛЕНЬКОЕ СЕРДЕЧКО ===== */
 .w-5-go-4-r-1 {
-  width: 103px;
-  height: 103px;
+  width: 7.153%;
+  height: 3.632%;
   position: absolute;
-  left: 79px;
-  top: 2083px;
+  left: 5.486%;
+  top: 73.449%;
   object-fit: cover;
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
 }
+
+/* ===== ОТРАЖЁННЫЙ АВАТАР ВНИЗУ СПРАВА ===== */
 ._1 {
-  width: 217px;
-  height: 193px;
+  width: 15.069%;
+  height: 6.805%;
   position: absolute;
-  left: 1249px;
-  top: 2548px;
+  left: 86.736%;
+  top: 89.845%;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
   object-fit: cover;
-  aspect-ratio: 217/193;
+  aspect-ratio: 217 / 193;
 }
+
+/* ===== ПРАВЫЙ БОЛЬШОЙ АВАТАР ===== */
 .ww-1 {
-  width: 335px;
-  height: 338px;
+  width: 23.264%;
+  height: 11.918%;
   position: absolute;
-  left: 1118px;
-  top: 1994px;
+  left: 77.639%;
+  top: 70.31%;
   object-fit: cover;
-  aspect-ratio: 335/338;
+  aspect-ratio: 335 / 338;
 }
+
+/* ===== НАВИГАЦИОННАЯ ПАНЕЛЬ (розовая) ===== */
 .rectangle-132 {
   background: #f1a7be;
-  border-radius: 17px;
-  width: 782px;
-  height: 56px;
+  border-radius: clamp(8px, 1.2vw, 17px);
+  width: 54.306%;
+  height: 1.975%;
   position: absolute;
-  left: 329px;
-  top: 14px;
+  left: 22.847%;
+  top: 0.494%;
 }
+
+/* ===== КНОПКА "аниме" ===== */
 .rectangle-16 {
   background: #f9829c;
-  border-radius: 22px;
-  width: 124px;
-  height: 56px;
+  border-radius: clamp(10px, 1.5vw, 22px);
+  width: 8.611%;
+  height: 1.975%;
   position: absolute;
-  left: 329px;
-  top: 14px;
+  left: 22.847%;
+  top: 0.494%;
 }
+
+/* ===== ТЕКСТ НАВИГАЦИИ ===== */
 .div2 {
   color: #ffffff;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
-  font-size: 32px;
+  font-size: clamp(14px, 2.2vw, 32px);
   font-weight: 400;
   position: absolute;
-  left: 348px;
-  top: 17px;
+  left: 24.167%;
+  top: 0.599%;
+  white-space: nowrap;
 }
+
+/* ===== ТРИ КАРТОЧКИ ВНУТРИ ЦЕНТРАЛЬНОГО БЛОКА ===== */
 ._8149-c-0-b-357-f-240-eb-5877-ded-83-c-6323-b-5-2 {
-  width: 137px;
-  height: 197px;
+  width: 9.514%;
+  height: 6.946%;
   position: absolute;
-  left: 479px;
-  top: 1327px;
+  left: 33.264%;
+  top: 46.791%;
   object-fit: cover;
-  aspect-ratio: 137/197;
+  aspect-ratio: 137 / 197;
 }
+
 ._5-d-2-ab-0-f-3-a-40-c-02-cb-60-bf-408-e-0839-c-9-eb-2 {
-  width: 144px;
-  height: 197px;
+  width: 10%;
+  height: 6.946%;
   position: absolute;
-  left: 646px;
-  top: 1327px;
+  left: 44.861%;
+  top: 46.791%;
   object-fit: cover;
-  aspect-ratio: 144/197;
+  aspect-ratio: 144 / 197;
 }
+
 .b-08-f-8930-a-108-ead-6122-bd-70481-bfe-8-a-8-2 {
-  width: 129px;
-  height: 199px;
+  width: 8.958%;
+  height: 7.017%;
   position: absolute;
-  left: 836px;
-  top: 1327px;
+  left: 58.056%;
+  top: 46.791%;
   object-fit: cover;
-  aspect-ratio: 129/199;
+  aspect-ratio: 129 / 199;
 }
+
+/* ===== КАРТИНКА ВНУТРИ ПЛЕЕРА ===== */
 .image-4 {
-  width: 535px;
-  height: 256px;
+  width: 37.153%;
+  height: 9.027%;
   position: absolute;
-  left: 452px;
-  top: 1972px;
+  left: 31.389%;
+  top: 69.535%;
   object-fit: cover;
-  aspect-ratio: 535/256;
+  aspect-ratio: 535 / 256;
 }
+
+/* ===== ТЕКСТ ВНИЗУ ===== */
 .div3 {
   color: #ffffff;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
-  font-size: 32px;
+  font-size: clamp(14px, 2.2vw, 32px);
   font-weight: 400;
   position: absolute;
-  left: 371px;
-  top: 2779px;
+  left: 25.764%;
+  top: 97.99%;
+  white-space: nowrap;
 }
+
+/* ===== ЛЕВЫЙ АВАТАР (середина-верх) ===== */
 ._021-1 {
-  width: 180px;
-  height: 180px;
+  width: 12.5%;
+  height: 6.347%;
   position: absolute;
-  left: 41px;
-  top: 567px;
+  left: 2.847%;
+  top: 19.993%;
   object-fit: cover;
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
+}
+
+/* ===== МЕДИА-ЗАПРОСЫ ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ЭКРАНОВ ===== */
+@media (max-width: 480px) {
+  .div2,
+  .div3 {
+    font-size: clamp(10px, 3.5vw, 16px);
+  }
+
+  .rectangle-132 {
+    border-radius: clamp(6px, 2vw, 12px);
+  }
+
+  .rectangle-16 {
+    border-radius: clamp(8px, 2.5vw, 16px);
+  }
 }
