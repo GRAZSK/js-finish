@@ -14,8 +14,8 @@ html, body {
 
 .top-nav,
 .bottom-nav {
-  background: #e4eaccc9;
-  padding: 15px 0;
+  background: #b6c08d;
+  padding: 25px 0;
   position: relative;
   z-index: 100;
 }
@@ -53,7 +53,7 @@ html, body {
 
 /* ===== ГЛАВНЫЙ КОНТЕЙНЕР ===== */
 .div {
-  background: #ffffff;
+
   width: 100%;
   max-width: 1440px;
   aspect-ratio: 1440 / 1423;
@@ -69,7 +69,7 @@ html, body {
 /* ===== ФОНОВОЕ ИЗОБРАЖЕНИЕ ===== */
 ._0477764895-b-3-b-7-f-5-a-1996-a-3776716-ac-2-1 {
   width: 151.806%;
-  height: 86.367%;
+  height: 87.367%;
   position: absolute;
   left: -26.319%;
   top: 5.13%;
@@ -77,63 +77,75 @@ html, body {
   aspect-ratio: 2186 / 1229;
 }
 
-/* ===== ЦЕНТРАЛЬНЫЙ ПОЛУПРОЗРАЧНЫЙ БЛОК ===== */
+
+
+/* ===== БЛОК С ТЕЛЕВИЗОРОМ  ===== */
 /* Фоновые элементы */
     .rectangle-19 {
       background: rgba(228, 234, 204, 0.79);
       width: 63.056%;
-      height: 87.14%;
+      height: 88.14%;
       position: absolute;
       left: 18.958%;
       top: 5.13%;
     }
-/* Телевизор - рамка */
-    .tv-container {
-      position: absolute;
-      left: 27.361%;
-      top: 16.655%;
-      width: 44.444%;
-      height: 39.353%;
-      background: #f4a5c4;
-      border-radius: clamp(10px, 1.5vw, 20px);
-      padding: 3% 4% 8%;
-      box-shadow: 
-        0 10px 30px rgba(0, 0, 0, 0.2),
-        inset 0 -5px 15px rgba(0, 0, 0, 0.1);
-    }
+/* Телевизор - контейнер с изображением */
+.tv-container {
+  position: absolute;
+  left: 27.361%;
+  top: 16.655%;
+  width: 44.444%;
+  height: 39.353%;
+  /* Убираем розовый фон, используем изображение */
+  background: transparent;
+}
 
-    /* Экран телевизора */
-    .tv-screen {
-      width: 100%;
-      height: 100%;
-      background: #2a2a2a;
-      border-radius: clamp(5px, 0.8vw, 10px);
-      overflow: hidden;
-      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
-      position: relative;
-    }
+/* Изображение телевизора */
+.tv-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
 
-    .tv-screen iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
+/* Экран поверх изображения телевизора */
+.tv-screen-overlay {
+  position: absolute;
+  /* Позиционирование экрана внутри телевизора */
+  left: 7%;
+  top: 9%;
+  width: 86%;
+  height: 60%;
+  z-index: 2;
+  background: #1a1a1a;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.6);
+}
 
-    /* Заглушка когда видео не выбрано */
-    .tv-placeholder {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #888;
-      font-size: clamp(12px, 1.5vw, 18px);
-      background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
-    }
+.tv-screen-overlay iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* Заглушка когда видео не выбрано */
+.tv-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: clamp(12px, 1.5vw, 18px);
+  background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
+}
 
     /* Подставка телевизора */
     .tv-stand {
@@ -206,9 +218,9 @@ html, body {
       }
     }
 
+/* ===== КОНЕЦ БЛОКА С ТЕЛЕВИЗОРОМ  ===== */
 
 
-/* ===== ВЕРХНЯЯ ДЕКОРАТИВНАЯ ПОЛОСА ===== */
 .tumblr-496-a-5-d-74078595315-c-0-b-20-e-8-bec-1-a-361-4472-fa-9-f-2048-1 {
   width: 103.611%;
   height: 10.19%;
@@ -312,7 +324,7 @@ html, body {
 .rectangle-18 {
   background: #abba72;
   width: 100%;
-  height: 7.73%;
+  height: 9.73%;
   position: absolute;
   left: 0%;
   top: 92.27%;
@@ -481,5 +493,19 @@ html, body {
   .rectangle-20,
   .rectangle-21 {
     border-radius: clamp(6px, 2vw, 12px);
+  }
+}
+@keyframes pulse {
+  0%, 100% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.1); }
+}
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 1200px) {
+  .main-container {
+    grid-template-columns: 250px 1fr;
+  }
+.nav-link {
+    font-size: 14px;
+    padding: 6px 12px;
   }
 }

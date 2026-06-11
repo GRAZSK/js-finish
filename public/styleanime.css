@@ -1,4 +1,4 @@
-/* ===== БАЗОВЫЕ СБРОСЫ ===== */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -7,8 +7,12 @@
 
 html, body {
   width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
-  background:url(./pic/tumblr_inline_n5br643k5X1r4ugnn.png);
+  background: url(./pic/4fb8c5f9845dfdc3c04f3cb8665d344d.gif) no-repeat;
+  background-size:  cover;
+  background-position: center top;
+  background-attachment: fixed;
 }
 
 /* ===== ГЛАВНЫЙ КОНТЕЙНЕР ===== */
@@ -24,7 +28,7 @@ html, body {
 
 .top-nav,
 .bottom-nav {
-  background: rgba(146, 11, 58, 0.95);
+  background: rgba(231, 52, 114, 0.76);
   padding: 15px 0;
   position: relative;
   z-index: 100;
