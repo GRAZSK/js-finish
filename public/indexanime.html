@@ -53,10 +53,7 @@
   <img class="_1280286-sokmo-55-abo-1" src="./pic/1280286sokmo55abo.webp" />
   <img class="b-59-x-24-1" src="./pic/b59x24.png" />
   <img class="_1293615-a-9-bwb-9-ebip-1" src="./pic/1293615a9bwb9ebip.gif" />
-  <img
-    class="b-3-da-2-c-87-ae-0-e-5-ed-67795555-c-6590-d-02-e-edited-free-carve-photos-1"
-    src="./pic/b3da2c87ae0e5ed67795555c6590d02e.jpg"
-  />
+ 
   <img class="_1815461-kr-6-olxnodw-1" src="./pic/1815461kr6olxnodw.webp" />
   <img
     class="tumblr-4-eecfceba-6-b-3-cdf-995-e-09-a-19-d-3087192-9503107-a-250-1"
@@ -112,7 +109,53 @@
     class="tumblr-f-9-d-433-b-3-eb-6-ffa-7-c-72-acd-820-c-8-e-851-bc-75184438-100-1"
     src="./pic/tumblr-f9d433b3eb6ffa7c72acd820c8e851bc-75184438-100.png"
   />
+  <!-- начало тв  -->
+<!-- Телевизор с изображением -->
+<div class="tv-container">
+  <!-- Изображение телевизора как основа -->
+  <img 
+    class="tv-image" 
+    src="./pic/b3da2c87ae0e5ed67795555c6590d02e-edited-free (carve.photos)(1).png" 
+    alt="Телевизор"
+  />
+  
+  <!-- Экран поверх изображения телевизора -->
+  <div class="tv-screen-overlay">
+    <iframe id="videoPlayer" src="" allowfullscreen></iframe>
+    <div class="tv-placeholder" id="placeholder">
+      Выберите аниме ↓
+    </div>
+  </div>
+</div>
 
+
+
+<!-- Постеры фильмов -->
+<img
+  class="poster dress_up"
+  src="./pic/8149c0b357f240eb5877ded83c6323b5.jpg"
+  onclick="playVideo('75WraMAZ0Lo')"
+  alt="Фильм 1"
+  title="Нажмите для просмотра"
+/>
+
+<img
+  class="poster nana"
+  src="./pic/5d2ab0f3a40c02cb60bf408e0839c9eb.jpg"
+  onclick="playVideo('CPg7qjhmXbo')"
+  alt="Фильм 2"
+  title="Нажмите для просмотра"
+/>
+
+<img
+  class="poster gay"
+  src="./pic/b08f8930a108ead6122bd70481bfe8a8.jpg"
+  onclick="playVideo('mQXLr6ktnWM')"
+  alt="Фильм 3"
+  title="Нажмите для просмотра"
+/>
+
+<!-- конец тв -->
 
   <img class="w-5-go-4-r-1" src="./pic/w5go4r.gif" />
   <img class="_1" src="./pic/а.gif" />
@@ -121,19 +164,48 @@
  
 
 
-  <img
-    class="_8149-c-0-b-357-f-240-eb-5877-ded-83-c-6323-b-5-2"
-    src="./pic/8149c0b357f240eb5877ded83c6323b5.jpg"
-  />
-  <img
-    class="_5-d-2-ab-0-f-3-a-40-c-02-cb-60-bf-408-e-0839-c-9-eb-2"
-    src="./pic/5d2ab0f3a40c02cb60bf408e0839c9eb.jpg"
-  />
-  <img
-    class="b-08-f-8930-a-108-ead-6122-bd-70481-bfe-8-a-8-2"
-    src="./pic/b08f8930a108ead6122bd70481bfe8a8.jpg"
-  />
-  
+ <div class="mp3">
+  <div class="player-content">
+      <div class="album-art">
+        <img src="" alt="Обложка" id="albumArt">
+      </div>
+      <div class="track-info">
+        <div class="track-title" id="trackTitle">Название трека</div>
+        <div class="track-artist" id="trackArtist">Исполнитель</div>
+      </div>
+ </div>
+ <div class="progress-container">
+      <div class="time-info">
+        <span id="currentTime">00:00</span>
+        <span id="duration">00:00</span>
+      </div>
+      <div class="progress-bar" id="progressBar">
+        <div class="progress" id="progress"></div>
+      </div>
+    </div>
+   <div class="controls">
+      <button class="control-btn" id="prevBtn" title="Предыдущий">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+        </svg>
+      </button>
+      
+      <button class="control-btn play-btn" id="playBtn" title="Играть/Пауза">
+        <svg viewBox="0 0 24 24" fill="currentColor" id="playIcon">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" id="pauseIcon" style="display: none;">
+          <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+        </svg>
+      </button>
+      
+      <button class="control-btn" id="nextBtn" title="Следующий">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
 
 
   

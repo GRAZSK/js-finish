@@ -244,16 +244,7 @@ html, body {
   aspect-ratio: 1 / 1;
 }
 
-/* ===== ЦЕНТРАЛЬНЫЙ ПЕРСОНАЖ (большой) ===== */
-.b-3-da-2-c-87-ae-0-e-5-ed-67795555-c-6590-d-02-e-edited-free-carve-photos-1 {
-  width: 50.347%;
-  height: 22.355%;
-  position: absolute;
-  left: 26.181%;
-  top: 10.367%;
-  object-fit: cover;
-  aspect-ratio: 725 / 634;
-}
+
 
 /* ===== НИЖНЯЯ ЦЕНТРАЛЬНАЯ КАРТИНКА ===== */
 ._1815461-kr-6-olxnodw-1 {
@@ -507,8 +498,58 @@ html, body {
   white-space: nowrap;
 }
 
+
+
+
+
+
+.tv-image{
+   width: 50.347%;
+  height: 22.355%;
+  position: absolute;
+  left: 26.181%;
+  top: 10.367%;
+  object-fit: cover;
+  aspect-ratio: 725 / 634;
+}
+/* Экран поверх изображения телевизора */
+.tv-screen-overlay {
+  position: absolute;
+  /* Позиционирование экрана внутри телевизора */
+  left: 29%;
+  top: 12%;
+  width: 46%;
+  height: 15%;
+  z-index: 2;
+  background: #1a1a1a;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.tv-screen-overlay iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* Заглушка когда видео не выбрано */
+.tv-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: clamp(12px, 1.5vw, 18px);
+  background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
+}
 /* ===== ТРИ КАРТОЧКИ ВНУТРИ ЦЕНТРАЛЬНОГО БЛОКА ===== */
-._8149-c-0-b-357-f-240-eb-5877-ded-83-c-6323-b-5-2 {
+.dress_up {
   width: 9.514%;
   height: 6.946%;
   position: absolute;
@@ -518,7 +559,7 @@ html, body {
   aspect-ratio: 137 / 197;
 }
 
-._5-d-2-ab-0-f-3-a-40-c-02-cb-60-bf-408-e-0839-c-9-eb-2 {
+.nana {
   width: 10%;
   height: 6.946%;
   position: absolute;
@@ -528,7 +569,7 @@ html, body {
   aspect-ratio: 144 / 197;
 }
 
-.b-08-f-8930-a-108-ead-6122-bd-70481-bfe-8-a-8-2 {
+.gay {
   width: 8.958%;
   height: 7.017%;
   position: absolute;
@@ -537,6 +578,169 @@ html, body {
   object-fit: cover;
   aspect-ratio: 129 / 199;
 }
+
+
+
+/* Постеры фильмов */
+.poster {
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: clamp(6px, 0.8vw, 12px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  object-fit: cover;
+}
+
+.poster:hover {
+  transform: scale(1.08) translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  border-color: #f4a5c4;
+  z-index: 10;
+}
+
+.poster:active {
+  transform: scale(1.02);
+}
+/* Адаптивность */
+@media (max-width: 768px) {
+  .poster:hover {
+    transform: scale(1.05) translateY(-3px);
+  }
+}
+
+@media (max-width: 480px) {
+  .tv-container {
+    padding: 2% 3% 6%;
+  }
+}
+
+/* zona mp3 */
+
+.mp3{
+   background: #d9d9d9;
+  width: 553px;
+  height: 291px;
+  position: absolute;
+  left: 441px;
+  top: 1964px;
+  border-radius: 50px;
+}
+
+ .player-content {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .album-art {
+      width: 70px;
+      height: 70px;
+      border-radius: 8px;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .album-art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .track-info {
+      flex: 1;
+    }
+
+    .track-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .track-artist {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .progress-container {
+      margin-bottom: 20px;
+    }
+
+    .time-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 4px;
+      background: #ddd;
+      border-radius: 2px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .progress {
+      height: 100%;
+      background: #9b59b6;
+      border-radius: 2px;
+      width: 0%;
+      transition: width 0.1s;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .control-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #666;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .control-btn:hover {
+      color: #9b59b6;
+      transform: scale(1.1);
+    }
+
+    .control-btn svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .play-btn {
+      width: 50px;
+      height: 50px;
+      background: #9b59b6;
+      border-radius: 50%;
+      color: white;
+    }
+
+    .play-btn:hover {
+      background: #8e44ad;
+      transform: scale(1.05);
+    }
+
+    .play-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+/* end zona mp3 */
 
 /* ===== КАРТИНКА ВНУТРИ ПЛЕЕРА ===== */
 .image-4 {

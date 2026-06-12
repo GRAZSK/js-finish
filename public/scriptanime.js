@@ -48,3 +48,55 @@ function processEvent(e) {
 
 document.addEventListener("mousemove", processEvent);
 window.addEventListener("load", initTrail);
+
+
+
+
+function playVideo(videoId) {
+      const player = document.getElementById('videoPlayer');
+      const placeholder = document.getElementById('placeholder');
+      
+      // Загружаем видео с автозапуском
+      player.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
+      
+      // Скрываем заглушку
+      placeholder.style.display = 'none';
+
+     
+    
+ }
+ const playlist = [
+      {
+        title: "candy store",           // Название трека
+        artist: "heathers ",              // Исполнитель
+        cover: "./pic/a4heathers.jpg",            // Путь к обложке (картинке)
+        src: "./m/3nur1wzqn0p004e62xnl.m4a"              // Путь к аудиофайлу
+      },
+      {
+        title: "Название песни 2",
+        artist: "Исполнитель 2",
+        cover: "./pic/cover2.jpg",
+        src: "./music/song2.mp3"
+      },
+      {
+        title: "Название песни 3",
+        artist: "Исполнитель 2",
+        cover: "./pic/cover2.jpg",
+        src: "./music/song2.mp3"
+    }
+  ]
+    // Автопереключение на следующий трек
+    function onTrackEnded() {
+      nextTrack();
+    }
+
+    // События
+    playBtn.addEventListener('click', togglePlay);
+    prevBtn.addEventListener('click', prevTrack);
+    nextBtn.addEventListener('click', nextTrack);
+    progressBar.addEventListener('click', seek);
+    audio.addEventListener('timeupdate', updateProgress);
+    audio.addEventListener('ended', onTrackEnded);
+
+    // Инициализация первого трека
+    loadTrack(currentTrackIndex);
