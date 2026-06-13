@@ -1,0 +1,539 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ===== НАВИГАЦИЯ ===== */
+.top-nav,
+.bottom-nav {
+  background: rgba(35, 3, 24, 0.95);
+  padding: 15px 0;
+  position: relative;
+  z-index: 100;
+}
+
+.nav-menu {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 20px;
+  border-radius: 22px;
+  background: rgba(255, 35, 167, 0.4);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: rgba(255, 35, 167, 0.8);
+  border-color: #ff66b2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 102, 178, 0.5);
+}
+
+/* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
+.main-container {
+  position: relative;
+  min-height: calc(100vh - 140px);
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr 280px;
+  gap: 20px;
+}
+
+/* ===== ФОНОВЫЕ СЛОИ ===== */
+.background-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bg-image-main,
+.bg-image-top,
+.bg-image-bottom {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.bg-image-top {
+  top: -40%;
+  left: 0;
+}
+
+.bg-image-bottom {
+  bottom: -30%;
+  left: 0;
+}
+
+/* ===== ЛЕВАЯ ПАНЕЛЬ ===== */
+
+/* Обертка для позиционирования в левой части (опционально) */
+.left-column {
+    width: 100%;
+    max-width: 450px; /* Ограничиваем ширину для аккуратного вида слева */
+    margin-right: 20px;
+}
+
+/* Основной контейнер секции */
+#dynamic-form-section {
+    background-color: #ffffff;
+    border: 2px solid #f8bbd0; /* Светло-розовая рамка */
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.1); /* Мягкая розовая тень */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Заголовок */
+#dynamic-form-section h2 {
+    color: #e91e63; /* Насыщенный розовый */
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+/* Группы полей */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Поля ввода */
+input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #f48fb1;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    background-color: #fffafa; /* Очень светлый розовый фон */
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #e91e63;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.15); /* Розовое свечение при фокусе */
+}
+
+/* Контейнер характеристик (выделенная зона) */
+#properties-container {
+    background-color: #fce4ec; /* Светло-розовый фон */
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px dashed #f06292;
+    margin-bottom: 20px;
+}
+
+#properties-container h3 {
+    color: #c2185b;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Строка свойств (располагает два поля в ряд) */
+.property-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.property-row input {
+    flex: 1; /* Равномерное распределение ширины */
+}
+
+/* Общие стили для кнопок */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Вторичная кнопка (добавить поле) */
+.btn-secondary {
+    background-color: transparent;
+    color: #e91e63;
+    border: 2px solid #e91e63;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.btn-secondary:hover {
+    background-color: #fce4ec;
+}
+
+/* Основная кнопка (сохранить) */
+.btn-primary {
+    background-color: #e91e63;
+    color: #ffffff;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+}
+
+.btn-primary:hover {
+    background-color: #c2185b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(233, 30, 99, 0.3);
+}
+
+/* Сообщения об успехе/ошибке */
+.message {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    display: none; /* Скрыто по умолчанию, управляется через JS */
+}
+
+.message.success {
+    display: block;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.message.error {
+    display: block;
+    background-color: #fce4ec;
+    color: #c2185b;
+    border: 1px solid #f48fb1;
+}
+
+
+
+.content-center {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(255, 102, 178, 0.3);
+  backdrop-filter: blur(10px);
+  border: 3px solid rgba(255, 182, 193, 0.5);
+}
+
+
+.hello-logo {
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 30px;
+  background: linear-gradient(135deg, rgba(255, 102, 178, 0.2), rgba(255, 182, 193, 0.2));
+  border-radius: 15px;
+  border: 3px solid rgba(255, 102, 178, 0.5);
+}
+
+.logo-text {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ff66b2;
+  text-shadow: 3px 3px 0 #ff99cc, 6px 6px 0 rgba(255, 102, 178, 0.3);
+  letter-spacing: 3px;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.logo-icon {
+  font-size: 36px;
+  margin: 0 10px;
+  display: inline-block;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Секции категорий */
+.category-section {
+  margin-bottom: 35px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  padding: 20px;
+  border: 2px solid rgba(255, 182, 193, 0.3);
+}
+
+.section-title {
+  margin-bottom: 20px;
+}
+
+.title-bar {
+  background: linear-gradient(135deg, #f63983, #ff66b2);
+  color: white;
+  text-align: center;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(246, 57, 131, 0.4);
+}
+
+.category-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.category-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid rgba(255, 102, 178, 0.4);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.category-img:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(255, 102, 178, 0.5);
+  border-color: #ff66b2;
+}
+
+.category-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.logo-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 10px rgba(255, 102, 178, 0.3));
+}
+
+.logo-img:hover {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.logo-img.barbie {
+  width: 120px;
+  height: 120px;
+}
+
+/* ===== ПРАВАЯ ПАНЕЛЬ ===== */
+.sidebar-right {
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.deco-image:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 8px 25px rgba(255, 102, 178, 0.5);
+}
+
+.deco-image.large {
+   height: 820px;
+  position: relative;
+  object-fit: cover;
+  aspect-ratio: 683/820;
+}
+
+.deco-image.circle {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  align-self: center;
+}
+.deco-image1{
+     width: 444px;
+  height: 244px;
+  position: relative;
+  object-fit: cover;
+  aspect-ratio: 1;
+  padding: 30px;
+}
+
+.deco-image2{
+      width: 244px;
+  height: 244px;
+  left: 210px;
+  position: relative;
+  object-fit: cover;
+  aspect-ratio: 1;
+  padding: 100;
+}
+
+/* ===== ДЕКОРАТИВНЫЕ ЭЛЕМЕНТЫ ===== */
+.decorations {
+  position: fixed;
+  bottom: 100px;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.heart-sticker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #ff66b2, #ff99cc);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 102, 178, 0.5);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.1); }
+}
+
+.star-deco {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  animation: twinkle 1.5s infinite;
+}
+
+.star-deco.left {
+  left: 20%;
+  bottom: 20px;
+}
+
+.star-deco.right {
+  right: 20%;
+  bottom: 20px;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
+  50% { opacity: 0.7; transform: scale(0.9) rotate(180deg); }
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 1200px) {
+  .main-container {
+    grid-template-columns: 250px 1fr;
+  }
+  
+  .sidebar-right {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+  
+  .sidebar-left {
+    position: relative;
+    top: 0;
+  }
+  
+  .category-window {
+    padding: 15px;
+  }
+  
+  .content-center {
+    padding: 20px;
+  }
+  
+  .category-items {
+    grid-template-columns: 1fr;
+  }
+  
+  .logo-text {
+    font-size: 36px;
+  }
+  
+  .nav-menu {
+    gap: 10px;
+  }
+  
+  .nav-link {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .logo-text {
+    font-size: 28px;
+  }
+  
+  .logo-icon {
+    font-size: 24px;
+  }
+  
+  .title-bar {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+  
+  .category-logos {
+    gap: 15px;
+  }
+  
+  .logo-img {
+    width: 70px;
+    height: 70px;
+  }
+}
