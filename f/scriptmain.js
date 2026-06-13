@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const div = document.createElement('div');
         div.className = 'property-row';
         div.innerHTML = `
-            <input type="text" name="propKey" placeholder="Свойство (напр. Цвет)" required>
-            <input type="text" name="propValue" placeholder="Значение (напр. Красный)" required>
+            <input type="text" name="propKey" placeholder="игры" required>
+            <input type="text" name="propValue" placeholder="музыка" required>
             <button type="button" class="remove-btn" style="color:red;">✕</button>
         `;
         

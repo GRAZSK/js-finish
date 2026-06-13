@@ -2,9 +2,11 @@
   "name": "js-finish",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "b/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node b/server.js",
+    "dev": "nodemon b/server.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,7 @@
   "homepage": "https://github.com/GRAZSK/js-finish#readme",
   "dependencies": {
     "express": "^5.2.1",
+    "mysql2": "^3.22.5",
     "sqlite3": "^6.0.1"
   },
   "devDependencies": {
