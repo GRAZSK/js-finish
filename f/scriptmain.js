@@ -89,3 +89,51 @@ document.addEventListener('DOMContentLoaded', () => {
         messageBox.className = `message ${type}`;
     }
 });
+async function loadObjectsList() {
+    const listContainer = document.querySelector('.objects-list'); // или другой селектор
+    
+    if (!listContainer) {
+        console.warn('Контейнер для списка объектов не найден');
+        return;
+    }
+    
+    try {
+        const response = await fetch('/api/dynamic-data');
+        
+        if (!response.ok) {
+            throw new Error('Ошибка загрузки данных');
+        }
+        
+        const data = await response.json();
+        
+        // Очищаем контейнер
+        listContainer.innerHTML = '';
+        
+        if (data.length === 0) {
+            listContainer.innerHTML = '<p>Пока нет добавленных объектов</p>';
+            return;
+        }
+        
+        // Создаем список объектов
+        data.forEach(item => {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'object-item';
+            itemDiv.innerHTML = `
+                <h4>${item.object_category}</h4>
+                <p>Характеристики:</p>
+                <ul>
+                    ${Object.entries(JSON.parse(item.properties)).map(([key, value]) => 
+                        `<li><strong>${key}:</strong> ${value}</li>`
+                    ).join('')}
+                </ul>
+                <small>Добавлено: ${new Date(item.created_at).toLocaleString()}</small>
+            `;
+            listContainer.appendChild(itemDiv);
+        });
+        
+    } catch (error) {
+        console.error('Ошибка при загрузке списка:', error);
+        listContainer.innerHTML = '<p class="error">Ошибка загрузки данных</p>';
+    }
+}
+loadObjectsList();
